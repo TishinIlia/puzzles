@@ -51,7 +51,6 @@ class Puzzles {
   }
 
   nextPiece(thread) {
-    console.log(thread)
     if (thread.sorted.length === 100 && thread.pieces.length === 0 && thread.sorted[thread.sorted.length - 1].isLast) {
       this.finish = true
       this.result = thread.sorted
@@ -95,7 +94,6 @@ class Puzzles {
         })
       }
     }
-    console.log(solutions)
     if (solutions.length === 0) {
       this.removeThread(thread.threadId)
     } else if (solutions.length === 1) {
